@@ -1,12 +1,39 @@
-# llm-app-sample
+# LLM APP Sample
 
-Sample Application with LLM + RAG
+Two sample Applications using Langchain, Streamlit and FastAPI.
 
-## Question List: Financial QA
+## Project Structure
 
+```bash
+llm-app-sample
+├── .env
+├── .gitignore
+├── Pipfile
+├── Pipfile.lock
+├── README.md
+├── requirements.txt
+├── main.py  # FastAPI 
+├── app.py   # Streamlit
+├── engine.py  # Langchain Engine for applications
+├── models.py  # Pydantic models for FastAPI
+├── tools.py  # Tools for applications
+└── pages
+    ├── Financial QA.py  # Financial Stock QA Application
+    └── Travel Searcher.py  # Travel Searcher Application
+```
+
+### Financial Stock QA
+
+This application is a simple question answering system that can answer questions related to financial data. The application uses the OpenAI API to answer questions related to financial data. The application can answer questions related to the CEO of a company, the revenue of a company in a specific year, and the stock price of a company on a specific date.
+
+#### Example Questions
 1. Who is apple's CEO?
 2. What is the revenue of apple in 2020?
 3. What is apple's today's stock price?
+
+### Travel Searcher
+
+This application is a simple travel search engine that can search for hotels and restaurants in a specific location. The application uses the Google Search API to search for hotels and restaurants in a specific location. 
 
 ## Pre-requisites
 

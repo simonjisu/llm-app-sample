@@ -27,6 +27,15 @@ def info_to_str(info) -> str:
         info_str += f'{x["title"]}: {x["name"]}\n'
     return info_str
 
+def news_to_str(ticker) -> str:
+    s = ''
+    for x in ticker.news:
+        s += f"Title: {x['title']}\n"
+        s += f"Publish Time: {dt.fromtimestamp(x['providerPublishTime'])}\n"
+        s += f"URL: {x['link']}\n"
+        s += f"Related Tickers: {x['relatedTickers']}\n"
+    return s
+
 @tool
 def get_ticker_info(ticker: str) -> dict:
     """Get address, sector industry, employee information for a ticker from Yahoo Finance API."""
@@ -46,15 +55,6 @@ def get_balance_sheet(ticker: str) -> pd.DataFrame:
     ticker = yf.Ticker(ticker)
     balance_sheet = ticker.balance_sheet
     return balance_sheet
-
-def news_to_str(ticker) -> str:
-    s = ''
-    for x in ticker.news:
-        s += f"Title: {x['title']}\n"
-        s += f"Publish Time: {dt.fromtimestamp(x['providerPublishTime'])}\n"
-        s += f"URL: {x['link']}\n"
-        s += f"Related Tickers: {x['relatedTickers']}\n"
-    return s
 
 @tool
 def get_news(ticker: str) -> str:

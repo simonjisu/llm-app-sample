@@ -1,11 +1,11 @@
 import streamlit as st
 import requests
 
-st.set_page_config(page_title="Financial QA", page_icon="📈")
+st.set_page_config(page_title="Financial Stock QA", page_icon="📈")
 
 API_URL = "http://localhost:8000"
 
-st.title("Financial QA System")
+st.title("Financial Stock QA System")
 clear_all_messages = st.sidebar.button("Clear all messages")
 if clear_all_messages:
     st.session_state.messages = []
