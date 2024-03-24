@@ -48,6 +48,11 @@ This application is a simple travel search engine that can search for hotels and
     GOOGLE_CSE_ID_HOTEL = ""  # see Google Search API Wrapper
     GOOGLE_CSE_ID_RESTAURANT = ""  # see Google Search API Wrapper
     ```
+* Install
+
+    ```shell
+    pip install -r requirements.txt
+    ```
 
 ### Google Search API Wrapper
     
@@ -96,3 +101,23 @@ $ cp sqlite/sqlite3.[ch] pysqlite3/
 $ cd pysqlite3
 $ python setup.py build_static build
 ```
+
+## Run the Applications
+
+### FastAPI
+
+Run 
+
+```shell
+$ python main.py
+```
+
+### Streamlit
+
+Run 
+
+```shell
+$ streamlit run app.py
+```
+
+and navigate to `http://localhost:8501` in your browser.
