@@ -3,15 +3,16 @@ import requests
 
 API_URL = "http://localhost:8000"
 
-st.title("Financial QA System for a Single Ticker")
-ticker = st.sidebar.selectbox("Ticker Info", ["AAPL", "GOOGL", "AMZN", "MSFT"])
-query = st.chat_input("type your question here")
-# TODO: implement chat history
-
-if query:
-    st.write(f"Question: {query}")
-    response = requests.post(f"{API_URL}/qa", json={"query": query})
-    response = response.json()['response']['content']
-    st.write(f"Response: {response}")
-
-
+st.set_page_config(
+    page_title="Appilcations",
+    page_icon="👋",
+)
+st.write("# Welcome to Demo! 👋")
+st.sidebar.success("Select a demo above.")
+st.write("""
+This document serves only as a quick guide for students in the Project4DS course to start learning development on top of ChatGPT and other LLM alike as well as an overview for approaches available and their target scenarios.          
+The document will be updated continuously as new features are introduced. 
+         
+* Course Instructor: Wen-Syan Li(📬wensyanli@gmail.com)
+* Created by: Jisoo Jang(📬simonjisu@gmail.com)
+""")

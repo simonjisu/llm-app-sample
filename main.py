@@ -3,7 +3,7 @@ import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from engine import chat_response
+from engine import agent_response, travel_response
 from models import UserQuery
 
 load_dotenv()
@@ -19,9 +19,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.post("/qa")
-async def qa(query: UserQuery):
-    response = chat_response(query.query)
+@app.post("/financial_qa")
+async def financial_qa(query: UserQuery):
+    response = agent_response(query.query)
+    return {
+        "response": response
+    }
+
+@app.post("/plan")
+async def plan_travel(query: UserQuery):
+    response = travel_response(query.query)
     return {
         "response": response
     }
