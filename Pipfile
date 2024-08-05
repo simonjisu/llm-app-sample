@@ -31,6 +31,8 @@ langsmith = "*"
 grandalf = "*"
 ipywidgets = "*"
 langchain-ollama = "*"
+langchain-upstage = "*"
+"pdfminer.six" = {extras = ["image"], version = "*"}
 
 [dev-packages]
 
