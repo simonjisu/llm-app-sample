@@ -3,6 +3,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[[source]]
+url = "https://download.pytorch.org/whl/cu121/"
+verify_ssl = true
+name = "pytorch"
+
 [packages]
 fastapi = "*"
 uvicorn = "*"
@@ -26,13 +31,25 @@ beautifulsoup4 = "*"
 google-api-python-client = "*"
 html2text = "*"
 langchain-community = "*"
-litellm = "*"
 langsmith = "*"
-grandalf = "*"
 ipywidgets = "*"
 langchain-ollama = "*"
-langchain-upstage = "*"
-"pdfminer.six" = {extras = ["image"], version = "*"}
+pdfplumber = "==0.11.2"
+pytesseract = "*"
+torch = {version = "==2.2.0+cu121", index = "pytorch"}
+torchvision = {version = "==0.17.0+cu121", index = "pytorch"}
+litellm = "*"
+grandalf = "*"
+layoutparser = {extras = ["layoutmodels", "ocr"], version = "*"}
+pillow = "==9.5.0"
+detectron2 = {ref = "v0.5", git = "git+https://github.com/facebookresearch/detectron2.git"}
+transformers = "*"
+langchain-huggingface = "*"
+faiss-cpu = "*"
+tiktoken = "*"
+lark = "*"
+langchain-chroma = "*"
+termcolor = "*"
 
 [dev-packages]
 
