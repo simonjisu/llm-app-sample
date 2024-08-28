@@ -50,6 +50,9 @@ tiktoken = "*"
 lark = "*"
 langchain-chroma = "*"
 termcolor = "*"
+camelot-py = "==0.11.0"
+pypdf2 = "<3.0"
+ghostscript = "*"
 
 [dev-packages]
 
